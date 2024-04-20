@@ -1,4 +1,4 @@
-# pwn.college - Kernel local build
+# pwn.college's dojo - but tuned for kernel security & beyond! 🧑‍💻
 
 Yet another pwn.college [dojo](https://github.com/pwncollege/dojo) fork, but just barely minimal for the shake of building stuff locally!
 
