@@ -355,7 +355,6 @@ FROM challenge-kernel as challenge
 
 RUN echo "root:root" | chpasswd
 
-
 RUN <<EOF
     if [ -f /etc/ssh/ssh_config ]
     then
@@ -379,6 +378,7 @@ RUN <<EOF
     useradd -s /bin/bash -m hacker
     passwd -d hacker
     echo "hacker:hacker" | chpasswd
+    echo "hacker ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/hacker
     find / -xdev -type f -perm -4000 -exec chmod u-s {} \;
     chmod u+s /opt/pwn.college/python \
               /opt/pwn.college/bash \
