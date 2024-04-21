@@ -49,11 +49,15 @@ def in_vm():
 
 
 def vm_power_off():
-    assert libc.reboot(LINUX_REBOOT_CMD_POWER_OFF) != -1
+    status = libc.reboot(LINUX_REBOOT_CMD_POWER_OFF)
+    print(status)
+    assert status != -1
 
 
 def vm_reboot():
-    assert libc.reboot(LINUX_REBOOT_CMD_RESTART) != -1
+    status = libc.reboot(LINUX_REBOOT_CMD_POWER_OFF)
+    print(status)
+    assert status != -1
 
 
 def extra_boot_flags():

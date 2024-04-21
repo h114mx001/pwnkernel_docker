@@ -1,2 +1,6 @@
 linux-*
 *.ko
+.bash_*
+*.py
+*.c
+.cache
