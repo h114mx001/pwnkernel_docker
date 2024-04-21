@@ -335,7 +335,7 @@ RUN <<EOF
     ln -sf /opt/pwn.college/vm/vm /usr/local/bin/vm
     ln -sf /opt/pwn.college/launch_challenge.sh /usr/local/bin/launch_challenge
     ln -sf /home/hacker/.tmux.conf /root/.tmux.conf
-    ln -sf /home/hacker/.gdbinit /root/.gdbinit
+    
     ln -sf /home/hacker/.pwn.conf /root/.pwn.conf
 
     mkdir /challenge
@@ -391,6 +391,12 @@ RUN <<EOF
               /opt/pwn.college/sh \
               /opt/pwn.college/vm/vm \
 
+EOF
+
+
+# resolve a dumb bug in gdbinit
+RUN <<EOF 
+    ln -sf /home/hacker/.gdbinit /root/.gdbinit 
 EOF
 
 WORKDIR /root
