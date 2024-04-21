@@ -157,6 +157,12 @@ RUN <<EOF
     ln -sf $PWD/vmlinux ../vmlinux
 EOF
 
+# compile scripts for gdb ultilites
+RUN <<EOF 
+    cd /opt/linux/linux-5.4 
+    make -j$(nproc) scripts_gdb 
+EOF
+
 FROM builder-kernel-${INSTALL_KERNEL} as builder-kernel
 
 ################################################################################
