@@ -4,7 +4,7 @@ Yet another pwn.college [dojo](https://github.com/pwncollege/dojo) fork, but jus
 
 ## Why this exists?
 
-I am a big fan of [pwn.college](https://pwn.college)! I love the learning styles of Professors here, love the supportive community and also their easy-but-not-so-easy challenges! So so great! However, the remote connection to pwn.college's dojo (personaly, to me) was really bad. Laggy, typos, etc. are all arounds. So, the solutions for them are local-first! 
+I am a big fan of [pwn.college](https://pwn.college)! I love the learning styles of Professors here, love the supportive community and also their easy-but-not-so-easy challenges! So so great! However, the remote connection to pwn.college's dojo (personally, to me) was really bad. Laggy, typos, etc. are all arounds. So, the solutions for them are local-first! 
 
 Modules like ROP, bof, etc. can easily be set up locally with somethings like [pwninit](https://github.com/io12/pwninit) (And I still work with them day by day). However, kernel security modules are the whole different. The default [pwnkernel](https://github.com/pwncollege/pwnkernel) works inside [busybox](https://www.busybox.net/), which (again, to me) lacks lots of customizing stuffs! Especially I missed `pwntools` and python so much 😭. 
 
